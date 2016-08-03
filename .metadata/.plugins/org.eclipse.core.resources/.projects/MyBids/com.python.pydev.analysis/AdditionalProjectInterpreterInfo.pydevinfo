@@ -1,0 +1,96 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/Users/Umapathi/Desktop/Bids/.metadata/.plugins/org.eclipse.core.resources/.projects/MyBids/com.python.pydev.analysis/v2_indexcache
+Bids.migrations.0003_auto_20160327_1821|1459102879000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/migrations/0003_auto_20160327_1821.py
+Bids.models|1469728183000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/models.py
+MyBids.wsgi|1457812692000000000|/Users/Umapathi/Desktop/Bids/MyBids/MyBids/wsgi.py
+Bids.views|1469983328000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/views.py
+Bids.migrations.0001_initial|1457973186000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/migrations/0001_initial.py
+Bids.migrations.0002_items|1458324254000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/migrations/0002_items.py
+Bids.apps|1457963518000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/apps.py
+manage|1457812692000000000|/Users/Umapathi/Desktop/Bids/MyBids/manage.py
+Bids.admin|1457963518000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/admin.py
+MyBids.settings|1469723354000000000|/Users/Umapathi/Desktop/Bids/MyBids/MyBids/settings.py
+Bids.migrations.__init__|1457963518000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/migrations/__init__.py
+Bids.__init__|1457963517000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/__init__.py
+MyBids.urls|1458837879000000000|/Users/Umapathi/Desktop/Bids/MyBids/MyBids/urls.py
+Bids.tests|1458422759000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/tests.py
+MyBids.__init__|1457812692000000000|/Users/Umapathi/Desktop/Bids/MyBids/MyBids/__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+15
+6=Bids.models
+8=Bids.migrations.0003_auto_20160327_1821
+14=User
+3=MyBids.wsgi
+13=Migration
+1=Bids.views
+5=Bids.apps
+7=Bids.migrations.0001_initial
+9=Bids.migrations.0002_items
+2=MyBids.settings
+12=BidsTestCase
+11=Items
+10=MyBids.urls
+4=Bids.tests
+15=BidsConfig
+-- END DICTIONARY
+-- START TREE 1
+28
+add|1|addItem!10@
+all|1|ALLOWED_HOSTS!19@
+app|1|application!27@
+aut|3|AUTH_PASSWORD_VALIDATORS!19@AUTH_USER_MODEL!19@AUTHENTICATION_BACKENDS!19@
+bas|1|BASE_DIR!19@
+bid|2|BidsTestCase!33@BidsConfig!41@
+dat|1|DATABASES!19@
+deb|1|DEBUG!19@
+ins|1|INSTALLED_APPS!19@
+ite|1|Items!49@
+lan|1|LANGUAGE_CODE!19@
+log|2|loginUser!10@logoutUser!10@
+mai|1|main!10@
+mid|1|MIDDLEWARE_CLASSES!19@
+mig|3|Migration!57@Migration!65@Migration!73@
+mon|2|MONGODB_DATABASES!19@MONGO_DATABASE_NAME!19@
+pro|1|PROJECT_ROOT!19@
+reg|1|register!10@
+roo|1|ROOT_URLCONF!19@
+sav|1|save_uploadImage!10@
+sec|1|SECRET_KEY!19@
+ses|0|
+sta|2|STATICFILES_DIRS!19@STATIC_URL!19@
+tem|1|TEMPLATES!19@
+tim|1|TIME_ZONE!19@
+url|1|urlpatterns!83@
+use|4|User!49@USE_I18N!19@USE_TZ!19@USE_L10N!19@
+wsg|1|WSGI_APPLICATION!19@
+-- END TREE
+-- START TREE 2
+25
+add|0|
+as_|1|as_json!11&50@
+che|2|checkSinpuTest!12&34@checkUserLogin!12&34@
+cit|0|
+cou|0|
+cre|0|
+dep|3|dependencies!13&75@dependencies!13&67@dependencies!13&59@
+des|0|
+ema|1|email!14&51@
+exa|0|
+id|0|
+ima|4|image2!11&51@image3!11&51@image4!11&51@image1!11&51@
+ini|1|initial!13&59@
+ite|4|itemDescp!11&51@itemPrice!11&51@itemType!11&51@itemName!11&51@
+nam|2|name!15&43@name!14&51@
+ope|3|operations!13&59@operations!13&75@operations!13&67@
+pas|1|password!14&51@
+pho|0|
+pin|0|
+sec|0|
+set|1|setUp!12&34@
+str|0|
+tim|1|timestamp!11&51@
+typ|0|
+use|1|user!11&51@
+-- END TREE

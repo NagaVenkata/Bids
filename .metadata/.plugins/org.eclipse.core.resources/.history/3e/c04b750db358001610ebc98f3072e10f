@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+.ItemImages {
+	
+	position:relative;
+	overflow: hidden;
+	width:100px;
+	height:100px;
+	
+}
+
+
+
+.ItemImages  li{
+	
+	display:inline;
+	list-style: none;
+	
+}
