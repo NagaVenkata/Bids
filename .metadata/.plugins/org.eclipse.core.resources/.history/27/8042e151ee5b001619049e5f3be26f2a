@@ -208,18 +208,15 @@ function showItemDescp(event)
 	
 	$image1.addClass('active1');
 	
-	$image1.addClass('ItemImages');
-	
 	$imageSliderList.append($image1);
 	
 	console.log(itemsData[event.id].image2.length);
 	
 	if(itemsData[event.id].image2.length>0)
 	{	
-		$image2 = $('<li >'+'<img src='+itemsData[event.id].image2+' width=150 height=150>'+'</li>');
+		$image2 = $('<li >'+'<img style="horizontal-aligin:left"src='+itemsData[event.id].image2+' width=150 height=150>'+'</li>');
 	
 		$imageSliderList.append($image2);
-		
 		
 		$bt = $('<button id="nextImage">Next</button>');
 		
@@ -233,14 +230,14 @@ function showItemDescp(event)
 	
 	if(itemsData[event.id].image3.length>0)
 	{	
-		$image3 = $('<li>'+'<img  src='+itemsData[event.id].image3+' width=150 height=150>'+'</li>');
+		$image3 = $('<li>'+'<img style="horizontal-aligin:left" src='+itemsData[event.id].image3+' width=150 height=150>'+'</li>');
 	
 		$imageSliderList.append($image3);
 	}
 	
 	if(itemsData[event.id].image4.length>0)
 	{	
-		$image4 = $('<li>'+'<img  src='+itemsData[event.id].image4+' width=150 height=150>'+'</li>');
+		$image4 = $('<li>'+'<img style="horizontal-aligin:left" src='+itemsData[event.id].image4+' width=150 height=150>'+'</li>');
 	
 		$imageSliderList.append($image4);
 	}
@@ -251,6 +248,4 @@ function showItemDescp(event)
 	
 	
 	$('#itemDialog').modal().show();
-	
-	initImageSlider();
 }

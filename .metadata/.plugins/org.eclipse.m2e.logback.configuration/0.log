@@ -64,3 +64,5 @@
 2016-08-04 13:48:06,351 [Worker-7] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@0.0.0.0:50671
 2016-08-05 19:25:20,136 [Worker-55] INFO  org.eclipse.jetty.server.Server - jetty-8.1.14.v20131031
 2016-08-05 19:25:20,425 [Worker-55] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@0.0.0.0:50947
+2016-08-06 14:02:45,837 [Worker-17] INFO  org.eclipse.jetty.server.Server - jetty-8.1.14.v20131031
+2016-08-06 14:02:46,203 [Worker-17] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@0.0.0.0:49727

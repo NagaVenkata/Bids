@@ -19,12 +19,6 @@
 	
 }
 
-.ItemImages img{
-	
-	horizontal-align:left;
-	
-}
-
 .leftButton {
 	
 	postion:relative;

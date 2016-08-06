@@ -95,7 +95,7 @@
     <div class="row" id="bidItems">
 		
 	</div> 
-	
+	</div>
 	
 	<!-- Item descp modal -->
 	<div id="itemDialog" class="modal fade" role="dialog">
@@ -150,7 +150,7 @@
     else
     {
     	parseBidItems(json_items);
-    		
+    	initImageSlider();	
     }
     
     

@@ -204,7 +204,7 @@ function showItemDescp(event)
 	$imageSliderList.attr('id','image_slider');
 	
 	
-	$image1 = $('<li>'+'<img  src='+itemsData[event.id].image1+' width=150 height=150>'+'</li>');
+	$image1 = $('<li>'+'<img  src='+itemsData[event.id].image1+' width=94 height=94>'+'</li>');
 	
 	$image1.addClass('active1');
 	
@@ -216,7 +216,7 @@ function showItemDescp(event)
 	
 	if(itemsData[event.id].image2.length>0)
 	{	
-		$image2 = $('<li >'+'<img src='+itemsData[event.id].image2+' width=150 height=150>'+'</li>');
+		$image2 = $('<li >'+'<img src='+itemsData[event.id].image2+' width=94 height=94>'+'</li>');
 	
 		$imageSliderList.append($image2);
 		

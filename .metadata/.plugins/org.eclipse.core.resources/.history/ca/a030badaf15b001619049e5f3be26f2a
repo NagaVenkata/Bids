@@ -16,13 +16,11 @@ function initImageSlider()
 	
 	$item = $('.active1');
 	
-	console.log($item);
-	
 	count = 0;
 	
 	$('#nextImage').click(function(){
 		
-		 nextImage();
+		nextImage();
 		
 		
 		
@@ -30,8 +28,7 @@ function initImageSlider()
 	
     $('#backImage').click(function(){
 		
-    	
-    		backImage();
+		backImage();
 		
 		
 	});
@@ -49,7 +46,7 @@ function nextImage()
 	$item.removeClass('.active1');
 	
 	$item.animate({
-	        "margin-left": (-250.0)
+	        "margin-left": (-140.0)
 	      }, 3000);
 	$item.next().addClass('active1');
 	$item = $item.next();
@@ -65,7 +62,7 @@ function backImage()
 	$item.removeClass('.active1');
 	
 	$item.animate({
-	        "margin-left": 250.0
+	        "margin-left": 140.0
 	      }, 3000);
 	$item.prev().addClass('active1');
 	

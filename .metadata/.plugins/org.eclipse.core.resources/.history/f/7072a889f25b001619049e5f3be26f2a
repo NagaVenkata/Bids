@@ -220,6 +220,7 @@ function showItemDescp(event)
 	
 		$imageSliderList.append($image2);
 		
+		$image2.addClass('ItemImages');
 		
 		$bt = $('<button id="nextImage">Next</button>');
 		

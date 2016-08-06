@@ -22,7 +22,7 @@ function initImageSlider()
 	
 	$('#nextImage').click(function(){
 		
-		 nextImage();
+		nextImage();
 		
 		
 		
@@ -30,8 +30,7 @@ function initImageSlider()
 	
     $('#backImage').click(function(){
 		
-    	
-    		backImage();
+		backImage();
 		
 		
 	});

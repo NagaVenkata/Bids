@@ -96,7 +96,6 @@
 		
 	</div> 
 	
-	
 	<!-- Item descp modal -->
 	<div id="itemDialog" class="modal fade" role="dialog">
   	<div class="modal-dialog">
@@ -150,7 +149,7 @@
     else
     {
     	parseBidItems(json_items);
-    		
+    	initImageSlider();	
     }
     
     
