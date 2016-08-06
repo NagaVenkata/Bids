@@ -43,6 +43,23 @@ def main(request):
         items['Descp'] = item.itemDescp.encode('utf-8') 
         items['price'] = item.itemPrice
         items['image1'] = item.image1.encode('utf-8')
+        
+        
+        if len(item.image2) > 0:
+            items['image2'] = item.image2.encode('utf-8')
+        else:
+            items['image2'] = ""
+                
+        if len(item.image3) > 0:
+            items['image3'] = item.image3.encode('utf-8')
+        else:
+            items['image3'] = ""
+        
+        if len(item.image4) > 0:
+            items['image4'] = item.image4.encode('utf-8')
+        else:
+            items['image4'] = ""
+                
         items['posted'] = item.timestamp.strftime('%Y-%m-%d')
                     
                     
@@ -151,11 +168,14 @@ def addItem(request):
 #         print (request.POST['itemDescp'])
 #         print (request.FILES.getlist('files'))
         
-        filename = None
+        filename = []
         
         for item in request.FILES.getlist('files'):
-            filename = save_uploadImage(request.POST['userName'],item)
-        
+            filename.append(save_uploadImage(request.POST['userName'],item))
+            
+        if len(filename) < 4:
+            for i in range(len(filename)-1,4):
+                filename.append("")
     
         
         item = Items(
@@ -164,10 +184,10 @@ def addItem(request):
                      itemType = item_type,
                      itemDescp = item_descp,
                      itemPrice = 200.0,
-                     image1 = filename,
-                     image2 = "",
-                     image3 = "",
-                     image4 = "",
+                     image1 = filename[0],
+                     image2 = filename[1],
+                     image3 = filename[2],
+                     image4 = filename[3],
                      timestamp = datetime.datetime.now())
            
         item.save()

@@ -1,6 +1,10 @@
 /**
  * 
  */
+
+var itemsData;
+
+
 $(document).ready(function(){
 	
 	
@@ -146,15 +150,15 @@ function parseBidItems(json_itemsData)
 	
 	console.log($imageSliderDiv);
 	
-	$('#bidItems').append($imageSliderDiv);
+	//$('#bidItems').append($imageSliderDiv);
 	
 	$bt = $('<button id="nextImage">Next</button>');
 	
-	$('#bidItems').append($bt);
+	//$('#bidItems').append($bt);
 	
 	$bt1 = $('<button class="leftButton" id="backImage">Back</button>');
 	
-	$('#bidItems').append($bt1);
+	//$('#bidItems').append($bt1);
 	
 		
 	for(i=0;i<itemsData.length;i++)
@@ -163,7 +167,9 @@ function parseBidItems(json_itemsData)
 		
 		$itemCol.addClass('col-md-6');
 		
-		var $itemImage = $('<img src='+itemsData[i].image1+' width=96 height=96>');
+		var $itemImage = $('<img src='+itemsData[i].image1+' width=96 height=96 onclick="showItemDescp(this)">');
+		
+		$itemImage.attr('id',i);
 		 
 		$itemCol.append($itemImage);
 	    	
@@ -186,4 +192,59 @@ function parseBidItems(json_itemsData)
 	console.log($('#image_slider'));
 	
 	console.log(document.getElementById('image_slider'));
+}
+
+function showItemDescp(event)
+{
+	
+	$('#itemDesp').empty();
+	
+	$imageSliderList = $('<ul>');
+	
+	$imageSliderList.attr('id','image_slider');
+	
+	
+	$image1 = $('<li >'+'<img src='+itemsData[event.id].image1+' width=150 height=150>'+'</li>');
+	
+	$image1.addClass('active1');
+	
+	$imageSliderList.append($image1);
+	
+	console.log(itemsData[event.id].image2.length);
+	
+	if(itemsData[event.id].image2.length>0)
+	{	
+		$image2 = $('<li >'+'<img src='+itemsData[event.id].image2+' width=150 height=150>'+'</li>');
+	
+		$imageSliderList.append($image2);
+		
+		$bt = $('<button id="nextImage">Next</button>');
+		
+		$('#itemDesp').append($bt);
+		
+		$bt1 = $('<button class="leftButton" id="backImage">Back</button>');
+		
+		$('#itemDesp').append($bt1);
+		
+	}
+	
+	if(itemsData[event.id].image3.length>0)
+	{	
+		$image3 = $('<li >'+'<img src='+itemsData[event.id].image3+' width=150 height=150>'+'</li>');
+	
+		$imageSliderList.append($image3);
+	}
+	
+	if(itemsData[event.id].image4.length>0)
+	{	
+		$image4 = $('<li >'+'<img src='+itemsData[event.id].image4+' width=150 height=150>'+'</li>');
+	
+		$imageSliderList.append($image4);
+	}
+	
+	
+	$('#itemDesp').append($imageSliderList);
+	
+	
+	$('#itemDialog').modal().show();
 }

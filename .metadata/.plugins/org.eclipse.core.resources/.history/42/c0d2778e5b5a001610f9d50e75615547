@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+.ItemImages {
+	
+	position:relative;
+	overflow: hidden;
+	width:250px;
+	height:200px;
+	margin: 0;
+  	padding: 0;
+	
+	
+}
+
+.ItemImages li{
+	
+	float:left;
+	list-style: none;
+	
+}
+
+.leftButton {
+	
+	postion:relative;
+	top:40px;
+	left:-50px;
+	z-index:1;
+}

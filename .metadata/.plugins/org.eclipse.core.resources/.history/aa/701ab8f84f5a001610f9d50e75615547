@@ -1,0 +1,197 @@
+/**
+ * 
+ */
+
+var itemsData;
+
+$(document).ready(function(){
+	
+	
+	$("#addItem").click(function(){
+		
+		alert($("#itemName").val()+" "+$("#itemType").find(":selected").text());
+		console.log($("#uploadFile").val());
+		
+	});
+	
+		
+	
+});
+
+function validateItems()
+{
+    console.log($("#uploadFile").get(0).files.length);
+    
+    
+	if($("#itemName").val().length<=0)
+	{
+	    $("#itemNameReq").text("Item name required");	
+		return false;
+	}
+	
+	if($("#itemType").find(":selected").text().length<=0)
+	{
+		$("#itemTypeReq").text("Item type required");
+		return false;
+	}
+	
+	if($("#itemDescp").val().length<=0)
+	{
+		$("#itemDescpReq").text("Item description required");
+		return false;
+	}
+	
+	if($("#uploadFile").get(0).files.length<=0)
+	{
+		$("#uploadFileReq").text("Upload item image/images");
+		return false;
+	}
+	
+	if($("#uploadFile").get(0).files.length>=4)
+	{
+		$("#uploadFileReq").text("Only 4 images can be uploaded");
+		return false;
+	}
+	
+	
+	
+	
+}
+
+function parseItems(json_itemsData)
+{
+
+	
+	itemsData = JSON.parse(json_itemsData);
+	
+	
+	for(i=0;i<itemsData.length;i++)
+	{
+		var $tr = $('<tr>');
+ 		
+ 		var $td_item = $('<td>');
+    	 
+    	var $itemName = $('<p>'+itemsData[i].name+'</p>');
+    	 
+    	// $square_button.attr('onclick','square_target_row()');
+    	 
+    	 $td_item.append($itemName);
+    	 
+    	 
+    	 $tr.append($td_item);
+    	 
+    	 
+    	 var $td_image = $('<td>');
+    	 
+      	 var $itemImage = $('<img src='+itemsData[i].image1+' width=48 height=48>');
+      	 
+      	// $square_button.attr('onclick','square_target_row()');
+      	 
+      	 $td_image.append($itemImage);
+      	 
+      	 
+      	 $tr.append($td_image); 
+    	
+    	 
+    	var $td_posted = $('<td>');
+    	 
+     	var $itemPosted = $('<p>'+itemsData[i].posted+'</p>');
+     	 
+     	// $square_button.attr('onclick','square_target_row()');
+     	 
+     	 $td_posted.append($itemPosted);
+     	 
+     	 
+     	 $tr.append($td_posted);
+     	 
+     	 $('#itemTable').find('tbody')
+ 			.append($tr);
+
+    	 
+    	 
+	}	
+}	
+	
+function parseBidItems(json_itemsData)
+{
+		
+	itemsData = JSON.parse(json_itemsData);
+	
+	$imageSliderDiv = $('<div>');
+	
+	$imageSliderDiv.addClass('ItemImages');
+	
+	$imageSliderList = $('<ul>');
+	
+	$imageSliderList.attr('id','image_slider');
+	
+	console.log($imageSliderList);
+	
+	$image1 = $('<li >'+'<img src=/static/User1/images/camera.png width=96 height=96>'+'</li>');
+	
+	$image1.addClass('active1');
+	
+	
+	$imageSliderList.append($image1);
+	
+	$image2 = $('<li>'+'<img src=/static/User1/images/camera2.png width=96 height=96>'+'</li>');
+	
+	
+	$imageSliderList.append($image2);
+	
+	$image3 = $('<li >'+'<img src=/static/User1/images/usb-pen-drive.jpg width=96 height=96>'+'</li>');
+	
+	
+	
+	$imageSliderList.append($image3);
+	
+	$imageSliderDiv.append($imageSliderList);
+	
+	console.log($imageSliderDiv);
+	
+	//$('#bidItems').append($imageSliderDiv);
+	
+	$bt = $('<button id="nextImage">Next</button>');
+	
+	//$('#bidItems').append($bt);
+	
+	$bt1 = $('<button class="leftButton" id="backImage">Back</button>');
+	
+	//$('#bidItems').append($bt1);
+	
+		
+	for(i=0;i<itemsData.length;i++)
+	{
+		$itemCol = $('<div>');
+		
+		$itemCol.addClass('col-md-6');
+		
+		var $itemImage = $('<img src='+itemsData[i].image1+' width=96 height=96 onclick="showItemDescp("'+i+')>');
+		 
+		$itemCol.append($itemImage);
+	    	
+		$itemDescp = $('<p>'+itemsData[i].Descp+'</p>');
+		
+		$itemDescp.append(' ');
+		
+		$bidButton = $('<button>Bid</button>');
+		
+		$bidButton.addClass('btn btn-primary');
+		
+		$itemDescp.append($bidButton);
+			
+		$itemCol.append($itemDescp);
+			
+		$('#bidItems').append($itemCol);
+			
+	}
+	
+	console.log($('#image_slider'));
+	
+	console.log(document.getElementById('image_slider'));
+}
+
+function showItemDescp(event)
+{
+	$('#itemDialog').modal().show();
+}
