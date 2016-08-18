@@ -15,6 +15,11 @@ $(document).ready(function(){
 		
 	});
 	
+	$('#sendBid').click(function() {
+		
+		sendBids();
+		
+	} );
 		
 	
 });
@@ -253,4 +258,26 @@ function showItemDescp(event)
 	$('#itemDialog').modal().show();
 	
 	initImageSlider();
+}
+
+function sendBids()
+{
+	var client_data = {};
+	client_data['username'] = userName;
+	client_data['bidPrice'] = $('#bidPrice').val();
+	
+	console.log(client_data);
+	
+	var request = $.ajax({
+		url: "/bidItems/",
+		type: "POST",
+		dataType:"json",
+		data: JSON.stringify(client_data),
+		contentType: "application/json;charset=utf-8",
+
+		success: function(res){
+			console.log("SUCCESS");
+			console.log(res);
+		}	
+	});	
 }

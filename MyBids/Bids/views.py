@@ -9,11 +9,15 @@ from django.contrib.auth import login
 from django.contrib.auth import logout
 from django.core.exceptions import ValidationError
 from django.shortcuts import render_to_response
+from django.shortcuts import HttpResponse
 
 from django_mongoengine.mongo_auth import models
 
 import datetime
+import json
+
 import os
+from django.views.decorators.csrf import csrf_exempt
 
 
 
@@ -195,6 +199,28 @@ def addItem(request):
     c={}
     c.update(csrf(request))
     return render_to_response("home.html",c)
+
+@csrf_exempt
+def bidItem(request):
+    
+    if request.is_ajax():
+        if request.method == 'POST':
+            json_str = request.body.decode(encoding='UTF-8')
+            json_obj = json.loads(json_str)
+            #clientData = json_obj['username'] 
+            
+            print (json_str)
+            
+            print (json_obj['username'])
+            print (json_obj['bidPrice'])
+            
+            response_data = []
+            
+            response_data['username'] = json_obj['username']
+            response_data['price'] = json_obj['bidPrice'] 
+            
+        return HttpResponse(json.dumps(response_data), content_type="application/json")
+        
 
 def save_uploadImage(username,imageFile):
     #Set Project Path

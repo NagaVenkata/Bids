@@ -1,0 +1,17 @@
+'''
+Created on Aug 17, 2016
+
+@author: Umapathi
+'''
+from django.conf.urls import url
+
+from Bids import views
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^$',main),
+    url(r'^login$',loginUser,name="login"),
+    url(r'^logout$',logoutUser,name="logout"),
+    url(r'^register$',register,name="register"),
+    url(r'^addItems$',addItem,name="addItems"),
+]

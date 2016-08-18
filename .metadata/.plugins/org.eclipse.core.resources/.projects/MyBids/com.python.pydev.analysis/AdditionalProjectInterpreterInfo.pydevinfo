@@ -2,9 +2,9 @@
 -- START DISKCACHE_2
 /Users/Umapathi/Desktop/Bids/.metadata/.plugins/org.eclipse.core.resources/.projects/MyBids/com.python.pydev.analysis/v2_indexcache
 Bids.migrations.0003_auto_20160327_1821|1459102879000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/migrations/0003_auto_20160327_1821.py
-Bids.models|1469728183000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/models.py
+Bids.models|1471361160000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/models.py
 MyBids.wsgi|1457812692000000000|/Users/Umapathi/Desktop/Bids/MyBids/MyBids/wsgi.py
-Bids.views|1470425364000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/views.py
+Bids.views|1471457154000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/views.py
 Bids.migrations.0001_initial|1457973186000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/migrations/0001_initial.py
 Bids.migrations.0002_items|1458324254000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/migrations/0002_items.py
 Bids.apps|1457963518000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/apps.py
@@ -12,28 +12,31 @@ manage|1457812692000000000|/Users/Umapathi/Desktop/Bids/MyBids/manage.py
 Bids.admin|1457963518000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/admin.py
 MyBids.settings|1469723354000000000|/Users/Umapathi/Desktop/Bids/MyBids/MyBids/settings.py
 Bids.migrations.__init__|1457963518000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/migrations/__init__.py
+Bids.urls|1471458332000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/urls.py
 Bids.__init__|1457963517000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/__init__.py
-MyBids.urls|1458837879000000000|/Users/Umapathi/Desktop/Bids/MyBids/MyBids/urls.py
+MyBids.urls|1471445162000000000|/Users/Umapathi/Desktop/Bids/MyBids/MyBids/urls.py
 Bids.tests|1458422759000000000|/Users/Umapathi/Desktop/Bids/MyBids/Bids/tests.py
 MyBids.__init__|1457812692000000000|/Users/Umapathi/Desktop/Bids/MyBids/MyBids/__init__.py
 -- END DISKCACHE
 -- START DICTIONARY
-15
-6=Bids.models
+17
+5=Bids.models
 8=Bids.migrations.0003_auto_20160327_1821
-14=User
+16=User
 3=MyBids.wsgi
-13=Migration
+15=Migration
 1=Bids.views
-5=Bids.apps
+6=Bids.apps
 7=Bids.migrations.0001_initial
 9=Bids.migrations.0002_items
 2=MyBids.settings
-12=BidsTestCase
-11=Items
-10=MyBids.urls
+10=Bids.urls
+13=BidItems
+14=BidsTestCase
+12=Items
+11=MyBids.urls
 4=Bids.tests
-15=BidsConfig
+17=BidsConfig
 -- END DICTIONARY
 -- START TREE 1
 28
@@ -42,11 +45,11 @@ all|1|ALLOWED_HOSTS!19@
 app|1|application!27@
 aut|3|AUTH_PASSWORD_VALIDATORS!19@AUTH_USER_MODEL!19@AUTHENTICATION_BACKENDS!19@
 bas|1|BASE_DIR!19@
-bid|2|BidsTestCase!33@BidsConfig!41@
+bid|4|bidItem!10@BidsTestCase!33@BidItems!41@BidsConfig!49@
 dat|1|DATABASES!19@
 deb|1|DEBUG!19@
 ins|1|INSTALLED_APPS!19@
-ite|1|Items!49@
+ite|1|Items!41@
 lan|1|LANGUAGE_CODE!19@
 log|2|loginUser!10@logoutUser!10@
 mai|1|main!10@
@@ -62,35 +65,36 @@ ses|0|
 sta|2|STATICFILES_DIRS!19@STATIC_URL!19@
 tem|1|TEMPLATES!19@
 tim|1|TIME_ZONE!19@
-url|1|urlpatterns!83@
-use|4|User!49@USE_I18N!19@USE_TZ!19@USE_L10N!19@
+url|2|urlpatterns!83@urlpatterns!91@
+use|4|User!41@USE_I18N!19@USE_TZ!19@USE_L10N!19@
 wsg|1|WSGI_APPLICATION!19@
 -- END TREE
 -- START TREE 2
-25
+26
 add|0|
-as_|1|as_json!11&50@
-che|2|checkSinpuTest!12&34@checkUserLogin!12&34@
+as_|1|as_json!12&42@
+bid|3|bidPrice!13&43@bidStartDate!13&43@bidEndDate!13&43@
+che|2|checkSinpuTest!14&34@checkUserLogin!14&34@
 cit|0|
 cou|0|
 cre|0|
-dep|3|dependencies!13&75@dependencies!13&67@dependencies!13&59@
+dep|3|dependencies!15&75@dependencies!15&67@dependencies!15&59@
 des|0|
-ema|1|email!14&51@
+ema|1|email!16&43@
 exa|0|
 id|0|
-ima|4|image2!11&51@image3!11&51@image4!11&51@image1!11&51@
-ini|1|initial!13&59@
-ite|4|itemDescp!11&51@itemPrice!11&51@itemType!11&51@itemName!11&51@
-nam|2|name!15&43@name!14&51@
-ope|3|operations!13&59@operations!13&75@operations!13&67@
-pas|1|password!14&51@
+ima|4|image2!12&43@image3!12&43@image4!12&43@image1!12&43@
+ini|1|initial!15&59@
+ite|4|itemDescp!12&43@itemPrice!12&43@itemType!12&43@itemName!12&43@
+nam|2|name!17&51@name!16&43@
+ope|3|operations!15&59@operations!15&75@operations!15&67@
+pas|1|password!16&43@
 pho|0|
 pin|0|
 sec|0|
-set|1|setUp!12&34@
+set|1|setUp!14&34@
 str|0|
-tim|1|timestamp!11&51@
+tim|1|timestamp!12&43@
 typ|0|
-use|1|user!11&51@
+use|2|user!12&43@user!13&43@
 -- END TREE

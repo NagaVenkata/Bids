@@ -108,11 +108,19 @@
         <h4 class="modal-title">Item Descp</h4>
       </div>
       <div class="modal-body">
-        <div row>
+        <div class="row">
         	<div id="itemDesp" class="col-md-9 ItemImages">
         		
         	</div>
         </div>
+        
+        <div class="row">
+        	<div class="col-md-6">
+        	  <input type="text" placeholder="Enter bid price" id="bidPrice">
+        	  <button id="sendBid">Bid</button> 
+        	</div>
+        </div>
+        
         
       </div>
       <div class="modal-footer">
@@ -127,7 +135,7 @@
 
 <script type="text/javascript">
 	
-
+    var userName;
 	
 	var json_itemsData = (("{{items |safe}}").replace(/&(l|g|quo)t;/g, function(a,b){
         return {
